@@ -1,8 +1,8 @@
 const footerLinks = {
-  "Who We Are": ["Our Story", "Our Team", "Testimonials", "Careers"],
-  Services: ["Comprehensive Packages", "Hourly Consulting", "Essay Editing", "Interview Prep"],
-  Resources: ["Blog", "Podcast", "Free Guides", "FAQ"],
-  Connect: ["Contact Us", "Free Consultation", "Newsletter"],
+  "About": ["Our Approach", "Our Team", "Track Record"],
+  Services: ["Initial Assessment", "Advisory Sessions", "Application Support", "Interview Prep", "Reapplication Support"],
+  Resources: ["Success Stories", "Maritime MBA Guide", "Contact"],
+  Connect: ["contact@beyondbridge.com", "Free Consultation", "Schedule Assessment"],
 };
 
 const Footer = () => {
@@ -12,11 +12,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-1">
             <span className="font-heading text-2xl font-bold">
-              <span className="text-secondary">admit</span>
-              <span className="text-primary">Pro.</span>
+              <span className="text-primary">Beyond</span>
+              <span className="text-secondary">Bridge</span>
             </span>
             <p className="text-sm opacity-60 mt-3 leading-relaxed">
-              Your trusted partner in MBA admissions consulting since 2005.
+              Specialized MBA admissions guidance for maritime professionals transitioning to business schools and careers ashore.
             </p>
           </div>
           {Object.entries(footerLinks).map(([heading, links]) => (
@@ -35,7 +35,7 @@ const Footer = () => {
           ))}
         </div>
         <div className="border-t border-background/10 mt-12 pt-8 text-center text-sm opacity-50">
-          © {new Date().getFullYear()} AdmitPro Consulting. All rights reserved.
+          © {new Date().getFullYear()} BeyondBridge Consulting. All rights reserved.
         </div>
       </div>
     </footer>

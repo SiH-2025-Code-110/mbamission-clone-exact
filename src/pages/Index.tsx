@@ -5,10 +5,8 @@ import StatsBar from "@/components/StatsBar";
 import PlatformSection from "@/components/PlatformSection";
 import TeamSection from "@/components/TeamSection";
 import ReviewsSection from "@/components/ReviewsSection";
-import MediaSection from "@/components/MediaSection";
-import GuidesSection from "@/components/GuidesSection";
 import SchoolsSection from "@/components/SchoolsSection";
-import BlogSection from "@/components/BlogSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -21,10 +19,8 @@ const Index = () => {
       <PlatformSection />
       <TeamSection />
       <ReviewsSection />
-      <MediaSection />
-      <GuidesSection />
       <SchoolsSection />
-      <BlogSection />
+      <ContactSection />
       <Footer />
     </div>
   );
