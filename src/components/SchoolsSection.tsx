@@ -2,19 +2,32 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
+import columbia from "@/assets/aa/Columbia.png";
+import harvard from "@/assets/aa/Harvard_University_coat_of_arms.svg";
+import mit from "@/assets/aa/MIT_School_of_Management.svg";
+import wharton from "@/assets/aa/Wharton-Logo-RGB.png";
+import cornell from "@/assets/aa/cornell.png";
+import hec from "@/assets/aa/hec-8718236.jpg";
+import insead from "@/assets/aa/images.jpg";
+import lbs from "@/assets/aa/images.png";
+import imperial from "@/assets/aa/imperial.png";
+import kellogg from "@/assets/aa/kellogg-school-of-management-emblem.png";
+import virginia from "@/assets/aa/virginia.png";
+import yale from "@/assets/aa/yale.jpeg";
+
 const schools = [
-  "Harvard Business School",
-  "Stanford GSB", 
-  "Wharton",
-  "Chicago Booth",
-  "Columbia Business School",
-  "MIT Sloan",
-  "Kellogg",
-  "INSEAD",
-  "London Business School",
-  "Cambridge Judge",
-  "Oxford Saïd",
-  "IE Business School",
+  { name: "Harvard Business School", logo: harvard },
+  { name: "Wharton", logo: wharton },
+  { name: "Columbia Business School", logo: columbia },
+  { name: "MIT Sloan", logo: mit },
+  { name: "Kellogg", logo: kellogg },
+  { name: "INSEAD", logo: insead },
+  { name: "London Business School", logo: lbs },
+  { name: "Imperial College", logo: imperial },
+  { name: "HEC Paris", logo: hec },
+  { name: "Cornell", logo: cornell },
+  { name: "Yale", logo: yale },
+  { name: "Virginia Darden", logo: virginia },
 ];
 
 const SchoolsSection = () => {
@@ -25,8 +38,7 @@ const SchoolsSection = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        when: "beforeChildren",
       },
     },
   };
@@ -41,14 +53,14 @@ const SchoolsSection = () => {
   };
 
   const schoolVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.9 },
+    hidden: { opacity: 0, scale: 0 },
     visible: {
       opacity: 1,
-      y: 0,
       scale: 1,
       transition: {
-        duration: 0.5,
-        ease: "easeOut",
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
       },
     },
   };
@@ -74,13 +86,13 @@ const SchoolsSection = () => {
           BeyondBridge candidates have successfully gained admission to leading global business schools across the United States, Europe, and the United Kingdom. Our specialized approach helps maritime professionals position their unique experience effectively for top-tier programs.
         </motion.p>
         <motion.div 
-          className="flex flex-wrap justify-center gap-4 pt-4"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 pt-4"
           variants={containerVariants}
         >
           {schools.map((school, i) => (
             <motion.div
-              key={school}
-              className="bg-background border border-border rounded-lg px-5 py-3 text-sm font-semibold text-foreground shadow-sm hover-lift"
+              key={school.name}
+              className="bg-background border border-border rounded-lg p-4 flex items-center justify-center shadow-sm hover-lift aspect-square"
               variants={schoolVariants}
               whileHover={{ 
                 scale: 1.05,
@@ -89,7 +101,11 @@ const SchoolsSection = () => {
               }}
               transition={{ duration: 0.2 }}
             >
-              {school}
+              <img
+                src={school.logo}
+                alt={school.name}
+                className="max-h-16 max-w-full object-contain transition-transform duration-300 hover:scale-110"
+              />
             </motion.div>
           ))}
         </motion.div>
