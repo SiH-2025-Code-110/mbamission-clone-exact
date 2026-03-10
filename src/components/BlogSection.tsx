@@ -38,10 +38,10 @@ const BlogSection = () => {
               href="#"
               className="group bg-background border border-border rounded-xl overflow-hidden hover:shadow-lg transition-shadow"
             >
-              <div className="h-32 bg-secondary/10" />
+              <div className="h-32 bg-gradient-to-br from-navy-100 to-ocean-100" />
               <div className="p-5 space-y-2">
                 <p className="text-xs text-muted-foreground">{post.date}</p>
-                <h3 className="font-bold text-sm text-foreground group-hover:text-primary transition-colors leading-snug">
+                <h3 className="font-bold text-sm text-foreground group-hover:text-secondary transition-colors leading-snug">
                   {post.title}
                 </h3>
                 <p className="text-xs text-muted-foreground">{post.excerpt}</p>

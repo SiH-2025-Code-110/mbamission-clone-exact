@@ -84,8 +84,8 @@ const SchoolsSection = () => {
               variants={schoolVariants}
               whileHover={{ 
                 scale: 1.05,
-                boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)",
-                borderColor: "hsl(var(--primary))",
+                boxShadow: "0 10px 25px rgba(10, 25, 41, 0.12)",
+                borderColor: "hsl(192, 60%, 38%)",
               }}
               transition={{ duration: 0.2 }}
             >
@@ -93,11 +93,11 @@ const SchoolsSection = () => {
             </motion.div>
           ))}
         </motion.div>
-        <motion.div variants={headerVariants}>
+        {/* <motion.div variants={headerVariants}>
           <Button variant="cta" size="lg" className="btn-animate hover-lift">
             Contact Us Today
           </Button>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   );

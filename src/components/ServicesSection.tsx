@@ -138,11 +138,11 @@ const ServicesSection = () => {
                 transition={{ delay: i * 0.2 + 0.3, duration: 0.6 }}
               >
                 <motion.div 
-                  className="bg-primary/10 rounded-lg p-3"
+                  className="bg-secondary/10 rounded-lg p-3"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <service.icon className="w-6 h-6 text-primary" />
+                  <service.icon className="w-6 h-6 text-secondary" />
                 </motion.div>
                 <div>
                   <h3 className="text-xl font-bold text-foreground">{service.title}</h3>
@@ -158,7 +158,7 @@ const ServicesSection = () => {
                     animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
                     transition={{ delay: i * 0.2 + j * 0.1 + 0.5, duration: 0.4 }}
                   >
-                    <CheckCircle className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
                     <span>{detail}</span>
                   </motion.li>
                 ))}
@@ -168,7 +168,7 @@ const ServicesSection = () => {
         </motion.div>
 
         <motion.div 
-          className="bg-primary/5 rounded-2xl p-8 text-center space-y-6"
+          className="bg-secondary/5 rounded-2xl p-8 text-center space-y-6 border border-secondary/10"
           variants={cardVariants}
         >
           <motion.h3 

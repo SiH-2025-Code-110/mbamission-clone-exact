@@ -43,6 +43,13 @@ const HeroSection = () => {
 
   return (
     <section className="hero-section relative overflow-hidden">
+      {/* Subtle wave decoration */}
+      <div className="absolute bottom-0 left-0 right-0 z-0">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
+          <path d="M0,60 C360,120 720,0 1440,60 L1440,120 L0,120 Z" fill="hsl(200, 20%, 99%)" fillOpacity="0.12" />
+          <path d="M0,80 C480,20 960,100 1440,40 L1440,120 L0,120 Z" fill="hsl(200, 20%, 99%)" fillOpacity="0.08" />
+        </svg>
+      </div>
       <motion.div 
         className="section-container grid lg:grid-cols-2 gap-8 items-center py-16 lg:py-24"
         variants={containerVariants}
@@ -87,15 +94,15 @@ const HeroSection = () => {
             transition={{ duration: 0.3 }}
           />
           <motion.div 
-            className="absolute bottom-4 right-4 lg:right-0 bg-primary/95 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] hover-scale"
+            className="absolute bottom-4 right-4 lg:right-0 bg-navy-900/95 backdrop-blur-sm rounded-lg p-4 shadow-lg max-w-[220px] hover-scale border border-ocean-400/20"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.6 }}
           >
-            <p className="font-bold text-sm">BeyondBridge Team</p>
-            <p className="text-xs opacity-80">Maritime MBA Specialists</p>
-            <p className="text-xs font-semibold mt-1">Sea to Shore</p>
-            <p className="text-xs opacity-80">Career Transitions</p>
+            <p className="font-bold text-sm text-white">BeyondBridge Team</p>
+            <p className="text-xs text-ocean-200">Maritime MBA Specialists</p>
+            <p className="text-xs font-semibold mt-1 text-gold">Sea to Shore</p>
+            <p className="text-xs text-ocean-300">Career Transitions</p>
           </motion.div>
         </motion.div>
       </motion.div>

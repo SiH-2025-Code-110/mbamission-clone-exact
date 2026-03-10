@@ -20,7 +20,7 @@ const TopBanner = () => {
       — Specialized guidance for your transition to business school and careers ashore.{" "}
       <motion.a 
         href="#" 
-        className="underline inline-flex items-center gap-1 hover:opacity-80"
+        className="underline inline-flex items-center gap-1 hover:opacity-80 text-gold"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0 }}

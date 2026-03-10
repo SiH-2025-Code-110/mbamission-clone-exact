@@ -44,7 +44,13 @@ const StatsBar = () => {
   };
 
   return (
-    <section className="stats-bar" ref={ref}>
+    <section className="stats-bar relative" ref={ref}>
+      {/* Subtle wave top border */}
+      <div className="absolute top-0 left-0 right-0 -translate-y-[1px]">
+        <svg viewBox="0 0 1440 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
+          <path d="M0,20 C360,0 720,15 1440,5 L1440,20 L0,20 Z" fill="hsl(213, 65%, 20%)" />
+        </svg>
+      </div>
       <motion.div 
         className="section-container grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-primary-foreground/20"
         variants={containerVariants}
@@ -64,7 +70,7 @@ const StatsBar = () => {
               animate={isVisible ? { scale: 1, rotate: 0 } : { scale: 0, rotate: -180 }}
               transition={{ delay: i * 0.2 + 0.5, duration: 0.6, ease: "easeOut" }}
             >
-              <stat.icon className="w-8 h-8 opacity-90" />
+              <stat.icon className="w-8 h-8 text-gold opacity-90" />
             </motion.div>
             <motion.p 
               className="text-sm font-medium leading-relaxed"

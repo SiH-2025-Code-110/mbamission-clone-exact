@@ -43,8 +43,10 @@ const PlatformSection = () => {
   };
 
   return (
-    <section id="platform" className="section-alt-bg section-padding" ref={ref}>
-      <div className="section-container grid lg:grid-cols-2 gap-12 items-center">
+    <section id="platform" className="section-alt-bg section-padding relative overflow-hidden" ref={ref}>
+      {/* Subtle maritime background pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 30 Q15 20 30 30 Q45 40 60 30\' stroke=\'%23147d8e\' fill=\'none\' stroke-width=\'1\'/%3E%3C/svg%3E")', backgroundSize: '60px 60px'}} />
+      <div className="section-container grid lg:grid-cols-2 gap-12 items-center relative z-10">
         <motion.div 
           className="space-y-6"
           variants={textVariants}
@@ -52,9 +54,10 @@ const PlatformSection = () => {
           animate={isVisible ? "visible" : "hidden"}
         >
           <motion.p 
-            className="text-secondary font-bold text-sm uppercase tracking-wider"
+            className="text-secondary font-bold text-sm uppercase tracking-wider flex items-center gap-2"
             variants={itemVariants}
           >
+            <span className="inline-block w-8 h-[2px] bg-gold" />
             Why BeyondBridge
           </motion.p>
           <motion.h2 

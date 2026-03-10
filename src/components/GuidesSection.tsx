@@ -32,7 +32,7 @@ const GuidesSection = () => {
           <ul className="space-y-3">
             {guides.map((g) => (
               <li key={g.label}>
-                <a href="#" className="flex items-center gap-3 text-secondary font-semibold hover:underline">
+                <a href="#" className="flex items-center gap-3 text-secondary font-semibold hover:text-ocean-600 hover:underline transition-colors">
                   <g.icon className="w-5 h-5" />
                   {g.label}
                 </a>

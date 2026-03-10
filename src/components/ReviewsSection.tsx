@@ -55,7 +55,18 @@ const ReviewsSection = () => {
   };
 
   return (
-    <section className="section-alt-bg section-padding" ref={ref}>
+    <section className="section-alt-bg section-padding relative" ref={ref}>
+      {/* Subtle compass watermark */}
+      <div className="absolute top-8 right-8 w-48 h-48 opacity-[0.03] pointer-events-none">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="90" stroke="currentColor" strokeWidth="2" />
+          <circle cx="100" cy="100" r="70" stroke="currentColor" strokeWidth="1" />
+          <line x1="100" y1="5" x2="100" y2="195" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="5" y1="100" x2="195" y2="100" stroke="currentColor" strokeWidth="1.5" />
+          <line x1="30" y1="30" x2="170" y2="170" stroke="currentColor" strokeWidth="1" />
+          <line x1="170" y1="30" x2="30" y2="170" stroke="currentColor" strokeWidth="1" />
+        </svg>
+      </div>
       <motion.div 
         className="section-container"
         variants={containerVariants}
@@ -88,7 +99,7 @@ const ReviewsSection = () => {
                 animate={isVisible ? { scale: 1, rotate: 0 } : { scale: 0, rotate: -180 }}
                 transition={{ delay: i * 0.2 + 0.5, duration: 0.6 }}
               >
-                <Quote className="w-8 h-8 text-primary opacity-50" />
+                <Quote className="w-8 h-8 text-secondary opacity-50" />
               </motion.div>
               <h3 className="font-bold text-lg text-foreground">{testimonial.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{testimonial.content}</p>
@@ -96,14 +107,14 @@ const ReviewsSection = () => {
           ))}
         </div>
         
-        <motion.div 
+        {/* <motion.div 
           className="text-center mt-12"
           variants={headerVariants}
         >
           <Button variant="cta" size="lg" className="btn-animate hover-lift">
             Start Your Journey
           </Button>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   );

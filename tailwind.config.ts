@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Merriweather", "serif"],
+        heading: ["Playfair Display", "Merriweather", "serif"],
         body: ["Source Sans 3", "sans-serif"],
       },
       colors: {
@@ -50,6 +50,32 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        gold: "hsl(var(--gold))",
+        navy: {
+          50: "#f0f4f8",
+          100: "#d9e2ec",
+          200: "#bcccdc",
+          300: "#9fb3c8",
+          400: "#829ab1",
+          500: "#627d98",
+          600: "#486581",
+          700: "#334e68",
+          800: "#243b53",
+          900: "#102a43",
+          950: "#0a1929",
+        },
+        ocean: {
+          50: "#e6f7f9",
+          100: "#b3e8ef",
+          200: "#80d9e5",
+          300: "#4dcadb",
+          400: "#26bed4",
+          500: "#1a9bb0",
+          600: "#147d8e",
+          700: "#0e5f6c",
+          800: "#08404a",
+          900: "#032228",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

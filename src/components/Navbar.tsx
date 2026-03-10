@@ -4,11 +4,11 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { label: "About Us", hasDropdown: false, href: "/" },
-  { label: "Services", hasDropdown: false, href: "/services" },
-  { label: "Our Team", hasDropdown: false, href: "/" },
-  { label: "Success Stories", hasDropdown: false, href: "/" },
-  { label: "Contact", hasDropdown: false, href: "/" },
+  { label: "About Us", hasDropdown: false, href: "/", badge: undefined },
+  { label: "Services", hasDropdown: false, href: "/services", badge: undefined },
+  { label: "Our Team", hasDropdown: false, href: "/", badge: undefined },
+  { label: "Success Stories", hasDropdown: false, href: "/", badge: undefined },
+  { label: "Contact", hasDropdown: false, href: "/", badge: undefined },
 ];
 
 const Navbar = () => {
@@ -61,12 +61,13 @@ const Navbar = () => {
         <motion.a 
           href="/" 
           className="flex items-center gap-1"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.3 }}
+          whileTap={{ scale: 1 }}
         >
           <span className="font-heading text-xl lg:text-2xl font-bold tracking-tight">
-            <span className="text-primary">Beyond</span>
-            <span className="text-secondary">Bridge</span>
+              <span className="text-black">Beyond</span>
+              <span className="text-red-600">Bridge</span>
+              <span className="text-red-400">.</span>
           </span>
         </motion.a>
 
@@ -92,15 +93,15 @@ const Navbar = () => {
               {item.hasDropdown && <ChevronDown className="w-3 h-3" />}
             </motion.a>
           ))}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8, duration: 0.4 }}
           >
             <Button variant="hero" size="sm" className="btn-animate hover-lift">
-              Free Consultation
+              Consult Now
             </Button>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Mobile toggle */}

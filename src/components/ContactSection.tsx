@@ -27,7 +27,13 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="section-padding bg-primary/5" ref={ref}>
+    <section className="section-padding bg-secondary/5 relative overflow-hidden" ref={ref}>
+      {/* Wave decoration */}
+      <div className="absolute top-0 left-0 right-0">
+        <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
+          <path d="M0,40 C480,10 960,35 1440,15 L1440,0 L0,0 Z" fill="hsl(200, 25%, 97%)" />
+        </svg>
+      </div>
       <motion.div 
         className="section-container text-center space-y-8"
         variants={containerVariants}
