@@ -1,6 +1,6 @@
 import TopBanner from "@/components/TopBanner";
 import Navbar from "@/components/Navbar";
-import ServicesSection from "@/components/ServicesSection";
+import ServicesPageContent from "@/components/ServicesPageContent";
 import Footer from "@/components/Footer";
 
 const Services = () => {
@@ -8,9 +8,7 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <TopBanner />
       <Navbar />
-      <div className="py-16">
-        <ServicesSection />
-      </div>
+      <ServicesPageContent />
       <Footer />
     </div>
   );

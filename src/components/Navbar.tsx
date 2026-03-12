@@ -61,8 +61,8 @@ const Navbar = () => {
         <motion.a 
           href="/" 
           className="flex items-center gap-1"
-          whileHover={{ scale: 1.3 }}
-          whileTap={{ scale: 1 }}
+          whileHover={{ scale: 1.4 }}
+          whileTap={{ scale: 1.2 }}
         >
           <span className="font-heading text-xl lg:text-2xl font-bold tracking-tight">
               <span className="text-black">Beyond</span>
