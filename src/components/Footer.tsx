@@ -18,9 +18,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-1">
             <span className="font-heading text-2xl font-bold">
-              <span className="text-white">Beyond</span>
-              <span className="text-ocean-400">Bridge</span>
-              <span className="text-gold">.</span>
+              <span className="text-black">Beyond</span>
+              <span className="text-red-600">Bridge</span>
+              <span className="text-red-400">.</span>
             </span>
             <p className="text-sm text-navy-300 mt-3 leading-relaxed">
               Specialized MBA admissions guidance for maritime professionals transitioning to business schools and careers ashore.
